@@ -8,8 +8,13 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-orange-500: oklch(70.5% 0.213 47.604);
+    --color-amber-100: oklch(96.2% 0.059 95.617);
+    --color-amber-950: oklch(27.9% 0.077 45.635);
     --color-yellow-600: oklch(68.1% 0.162 75.834);
+    --color-green-100: oklch(96.2% 0.044 156.743);
     --color-green-500: oklch(72.3% 0.219 149.579);
+    --color-green-900: oklch(39.3% 0.095 152.535);
     --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-900: oklch(37.9% 0.146 265.522);
@@ -166,11 +171,14 @@
   }
 }
 @layer utilities {
-  .m-4 {
-    margin: calc(var(--spacing) * 4);
-  }
   .table {
     display: table;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .h-screen {
+    height: 100vh;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -178,27 +186,12 @@
   .resize {
     resize: both;
   }
-  .rounded {
-    border-radius: 0.25rem;
-  }
-  .rounded-md {
-    border-radius: var(--radius-md);
-  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .bg-blue-400 {
-    background-color: var(--color-blue-400);
-  }
   .bg-red-500 {
     background-color: var(--color-red-500);
-  }
-  .p-2 {
-    padding: calc(var(--spacing) * 2);
-  }
-  .text-white {
-    color: var(--color-white);
   }
   .underline {
     text-decoration-line: underline;
@@ -207,54 +200,34 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
-  .group-hover\:bg-red-500 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        background-color: var(--color-red-500);
-      }
+  .sm\:bg-orange-500 {
+    @media (width >= 40rem) {
+      background-color: var(--color-orange-500);
     }
   }
-  .group-hover\:text-blue-500 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        color: var(--color-blue-500);
-      }
+  .md\:bg-blue-500 {
+    @media (width >= 48rem) {
+      background-color: var(--color-blue-500);
     }
   }
-  .hover\:bg-blue-900 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-blue-900);
-      }
+  .lg\:bg-green-100 {
+    @media (width >= 64rem) {
+      background-color: var(--color-green-100);
     }
   }
-  .hover\:bg-red-500 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-red-500);
-      }
+  .lg\:bg-green-900 {
+    @media (width >= 64rem) {
+      background-color: var(--color-green-900);
     }
   }
-  .hover\:p-3 {
-    &:hover {
-      @media (hover: hover) {
-        padding: calc(var(--spacing) * 3);
-      }
+  .xl\:bg-amber-950 {
+    @media (width >= 80rem) {
+      background-color: var(--color-amber-950);
     }
   }
-  .focus\:bg-yellow-600 {
-    &:focus {
-      background-color: var(--color-yellow-600);
-    }
-  }
-  .active\:bg-green-500 {
-    &:active {
-      background-color: var(--color-green-500);
-    }
-  }
-  .active\:bg-red-500 {
-    &:active {
-      background-color: var(--color-red-500);
+  .\32 xl\:bg-amber-100 {
+    @media (width >= 96rem) {
+      background-color: var(--color-amber-100);
     }
   }
 }
