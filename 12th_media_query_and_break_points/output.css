@@ -221,13 +221,6 @@
       }
     }
   }
-  .hover\:bg-blue-400 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-blue-400);
-      }
-    }
-  }
   .hover\:bg-blue-900 {
     &:hover {
       @media (hover: hover) {
@@ -242,24 +235,10 @@
       }
     }
   }
-  .hover\:p-1 {
-    &:hover {
-      @media (hover: hover) {
-        padding: calc(var(--spacing) * 1);
-      }
-    }
-  }
   .hover\:p-3 {
     &:hover {
       @media (hover: hover) {
         padding: calc(var(--spacing) * 3);
-      }
-    }
-  }
-  .hover\:text-blue-500 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-blue-500);
       }
     }
   }
