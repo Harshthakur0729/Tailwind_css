@@ -1,0 +1,1 @@
+When h-screen is applied to a parent <div>, you can use h-full on its child elements to make them take up the full height of the parent
