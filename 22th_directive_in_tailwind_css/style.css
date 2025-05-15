@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    button{
+
+        border: 1px solid black;
+        padding: 1px;
+
+    }
+} */
+
+@layer base{
+h1{
+  @apply text-3xl;
+}
+h2{
+    @apply text-2xl;
+}
+h3{
+    @apply text-xl;
+}
+button{
+    @apply border border-black p-1;
+}
+}

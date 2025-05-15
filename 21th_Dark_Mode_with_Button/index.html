@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" id="main" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Document</title>
+    <script>
+        function changemode() {
+            let el = document.getElementById("main").className;
+            if (el.className == 'dark') {
+                document.getElementById("main").className = "light";
+            }
+            else {
+                document.getElementById("main").className = "dark";
+            }
+        }
+    </script>
+</head>
+
+
+
+
+<body>
+    <button onclick="changemode()" class="border border-slate-600 m-2 p-2 rounded  hover:bg-slate-100">Apply Dark Mode
+    </button>
+    <div class="dark:bg-black dark:text-white">
+        <h1 class="text-7xl ">Dark Mode Test With Tailwind Css </h1>
+        <p class="text-4xl">Code with code</p>
+    </div>
+
+    <div class="flex m-20 border border-slate-600 p-3 dark:bg-slate-600 dakr:border-blue-500">
+        <div class="bg-blue-500 size-12 dark:bg-black "></div>
+        <p class="text-2xl ml-10 p-2 text-white">Box With Dark Mode</p>
+    </div>
+</body>
+
+</html>

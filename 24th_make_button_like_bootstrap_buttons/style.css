@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply border border-slate-400 rounded px-5 py-1.5 hover:bg-slate-100
+    }
+
+    .btn-primary {
+        @apply bg-blue-500 hover:bg-blue-600 text-white boder-blue-500
+    }
+
+    .btn-secondary {
+        @apply bg-salte-500 hover:bg-salte-600 text-white boder-salte-500
+    }
+
+    .btn-success {
+        @apply bg-green-500 hover:bg-green-600 text-white boder-green-500
+    }
+
+    .btn-Danger {
+        @apply bg-red-500 hover:bg-red-600 text-white boder-red-500
+    }
+
+    .btn-Warning {
+        @apply bg-yellow-500 hover:bg-yellow-600 text-black boder-yellow-500
+    }
+
+    .btn-Info {
+        @apply bg-cyan-500 hover:bg-cyan-600 text-white boder-cyan-500
+    }
+
+    .btn-Dark {
+        @apply bg-black hover:bg-black text-white boder-slate-900
+    }
+}
